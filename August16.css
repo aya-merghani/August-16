@@ -193,6 +193,9 @@ body {
  background-size: cover;
  background-attachment: fixed;
 }
+body.activity {
+background-color: beige;
+}
 
 .envlope-wrapper {
   height: 380px;
@@ -210,9 +213,9 @@ body {
   transition: all 0.1s linear;
   -webkit-appearance: none;
   background-color: transparent;
-  border: solid 2px white;
+  border: solid 2px blue;
   border-radius: 4px;
-  color: white;
+  color: blue;
   display: inline-block;
   font-size: 14px;
   text-transform: uppercase;
@@ -225,8 +228,8 @@ body {
 }
 
 .reset button:hover {
-  background-color: whitesmoke;
-  color: gray;
+  background-color: navy;
+  color: blue;
 }
 
 .letterimg {
@@ -256,4 +259,52 @@ margin-bottom: auto;
   justify-content: center;
   align-items: center;
   margin-bottom: auto;
+}
+h1 {
+justify-self: center;
+font-style: normal;
+}
+.yes {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+}
+.yes:hover {
+  color: white;
+  padding: 20px;
+}
+.reset .no, .reset .y {
+  font-weight: 800;
+  font-style: normal;
+  transition: all 0.1s linear;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: solid 2px white;
+  border-radius: 4px;
+  color: white;
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 5px;
+  padding: 10px;
+  line-height: 1em;
+  text-decoration: none;
+  min-width: 120px;
+  cursor: pointer;
+}
+
+.reset .no:hover ,.reset .y:hover {
+  background-color: goldenrod;
+  color: white;
+}
+.nuh-uh {
+  justify-items: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.lin {
+  width: 40%;
+  display: flex;
+  filter: drop-shadow(0 0 0.75rem rgb(182, 131, 2));
 }
