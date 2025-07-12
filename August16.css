@@ -23,7 +23,7 @@
   border-right: 140px solid transparent;
   border-bottom: 82px solid transparent;
   /* a little smaller */
-  border-top: 98px solid navy; /* Same navy */
+  border-top: 98px solid lightgray; /* Same navy */
   /* a little larger */
   transform-origin: top;
   pointer-events: none;
@@ -31,9 +31,9 @@
 }
 
 .pocket {
-  border-left: 140px solid rgb(4, 99, 255); /* Soft blue for the pocket */
-  border-right: 140px solid rgb(4, 99, 1255);
-  border-bottom: 90px solid rgb(0, 0, 155); /* Lighter navy */
+  border-left: 140px solid white; /* Soft blue for the pocket */
+  border-right: 140px solid white;
+  border-bottom: 90px solid whitesmoke; /* Lighter navy */
   border-top: 90px solid transparent;
   border-radius: 7px;
 
@@ -188,7 +188,10 @@
   }
 }
 body {
-  background-color: goldenrod; /* Soft lavender for a romantic, dreamy feel */
+  background-image: url(background.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment: fixed;
 }
 
 .envlope-wrapper {
@@ -207,9 +210,9 @@ body {
   transition: all 0.1s linear;
   -webkit-appearance: none;
   background-color: transparent;
-  border: solid 2px navy;
+  border: solid 2px white;
   border-radius: 4px;
-  color: navy;
+  color: white;
   display: inline-block;
   font-size: 14px;
   text-transform: uppercase;
@@ -222,8 +225,8 @@ body {
 }
 
 .reset button:hover {
-  background-color: rgb(0, 0, 155);
-  color: #fff;
+  background-color: whitesmoke;
+  color: gray;
 }
 
 .letterimg {
