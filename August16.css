@@ -1,0 +1,256 @@
+#envelope {
+  position: relative;
+  width: 280px;
+  height: 180px;
+ border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 150px;
+  background-color: navy; /* navy blue */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+ 
+}
+
+.front {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 3;
+}
+
+.flap {
+  border-left: 140px solid transparent;
+  border-right: 140px solid transparent;
+  border-bottom: 82px solid transparent;
+  /* a little smaller */
+  border-top: 98px solid navy; /* Same navy */
+  /* a little larger */
+  transform-origin: top;
+  pointer-events: none;
+  
+}
+
+.pocket {
+  border-left: 140px solid rgb(4, 99, 255); /* Soft blue for the pocket */
+  border-right: 140px solid rgb(4, 99, 1255);
+  border-bottom: 90px solid rgb(0, 0, 155); /* Lighter navy */
+  border-top: 90px solid transparent;
+  border-radius: 7px;
+
+}
+
+.letter {
+  position: relative;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 90%;
+  top: 5%;
+  border-radius: 6px;
+  box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
+  font-family: "Dancing Script", cursive;
+}
+
+.letter:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.words {
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  height: 14%;
+  background-color: #ffe6e6; /* Light romantic tone */
+}
+
+.words.line1 {
+  top: 10%;
+  font-size: 0.5rem;
+  width: 20%;
+  height: 7%;
+  font-size: 0.7rem;
+}
+
+.words.line2 {
+  top: 30%;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.words.line3 {
+  top: 50%;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.words.line4 {
+  top: 70%;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.open .flap {
+  transform: rotateX(180deg);
+  transition: transform 0.4s ease, z-index 0.6s;
+  z-index: 1;
+}
+
+.close .flap {
+  transform: rotateX(0deg);
+  transition: transform 0.4s 0.6s ease, z-index 1s;
+  z-index: 5;
+}
+
+.close .letter {
+  transform: translateY(0px);
+  transition: transform 0.4s ease, z-index 1s;
+  z-index: 1;
+ overflow: hidden;
+}
+
+.open .letter {
+  transform: translateY(-170px);
+  transition: transform 0.4s 0.6s ease, z-index 0.6s;
+  z-index: 2;
+}
+
+.a1 {
+  left: 20%;
+  transform: scale(0.6);
+  opacity: 1;
+  -webkit-animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
+  -moz-animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+.a2 {
+  left: 55%;
+  transform: scale(1);
+  opacity: 1;
+  -webkit-animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
+  -moz-animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+.a3 {
+  left: 10%;
+  transform: scale(0.8);
+  opacity: 1;
+  -webkit-animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
+  -moz-animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -600px;
+  }
+}
+@keyframes slideUp {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -600px;
+  }
+}
+@-webkit-keyframes sideSway {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 50px;
+  }
+}
+@keyframes sideSway {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 50px;
+  }
+}
+body {
+  background-color: goldenrod; /* Soft lavender for a romantic, dreamy feel */
+}
+
+.envlope-wrapper {
+  height: 380px;
+  overflow: hidden;
+
+}
+
+.reset {
+  text-align: center;
+}
+
+.reset button {
+  font-weight: 800;
+  font-style: normal;
+  transition: all 0.1s linear;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: solid 2px navy;
+  border-radius: 4px;
+  color: navy;
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 5px;
+  padding: 10px;
+  line-height: 1em;
+  text-decoration: none;
+  min-width: 120px;
+  cursor: pointer;
+}
+
+.reset button:hover {
+  background-color: rgb(0, 0, 155);
+  color: #fff;
+}
+
+.letterimg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 20px;
+}
+/*
+.letterimg:before{
+ overflow: hidden;
+}
+.letterimg:after{
+ position: absolute;
+ overflow: hidden;
+}
+ */
+.topper {
+  width: 20%;
+filter: drop-shadow(0 0 0.75rem rgb(182, 131, 2));
+margin-bottom: auto;
+}
+.cake {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: auto;
+}
