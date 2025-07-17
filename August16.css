@@ -333,7 +333,7 @@ font-style: normal;
   color: rgb(63, 109, 175);
   font-family: "Dancing Script", cursive;
   width: 40%;
-  border: 2px solid #d6c083;
+  border: 2px solid #fde8bd;
   border-radius: 4px;
   padding: 95px 20px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -358,7 +358,7 @@ font-style: normal;
   border: 2px dashed #fde8bd;
   width: 130px;
   transition: transform 0.3s ease, font-size 0.3s ease;
-   transform-origin: center center;
+  transform-origin: center center;
 }
 /*
 .strip input:checked + .text {
@@ -378,10 +378,12 @@ font-style: normal;
   display: flex;
   align-items: stretch;
   max-width: 800px;
+  max-height: max-content;
  }
 }
 .back {
   margin-bottom: 20px;
+  font-size: 1.5rem;
   padding: 20px;
   color: steelblue;
   text-decoration: solid;
