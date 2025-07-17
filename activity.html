@@ -2,15 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>August 16</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
       rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <link rel="stylesheet" href="August16.css" />
   </head>
-  <body>
+  <body class="act">
      <div class="envlope-wrapper">
       <div id="envelope" class="close">
         <div class="front flap"></div>
@@ -23,8 +26,41 @@
     <div class="reset">
       <button id="open">Open</button>
       <button id="reset">Close</button>
+      <a href="letter.jpg" download="letter.jpg" class="download">⬇️</a>
     </div>
-
+    <div class="layout">
+    <div class="flyer">
+  <h2>Take your daily affirmation :)</h2>
+  </div>
+  <div class="strips">
+    <label class="strip">
+      <input type="checkbox" hidden>
+      <span class="text">I'm inimatable </span>
+    </label>
+    <label class="strip">
+      <input type="checkbox" hidden>
+      <span class="text">I'm not faling behind or running late</span>
+    </label>
+    <label class="strip">
+      <input type="checkbox" hidden>
+      <span class="text">I'm not throwing away my shot</span>
+    </label>
+      <label class="strip">
+      <input type="checkbox" hidden>
+      <span class="text">I'm an original</span>
+    </label>
+    <label class="strip">
+      <input type="checkbox" hidden>
+      <span class="text">I'm satisfied</span>
+    </label>
+    <label class="strip">
+      <input type="checkbox" hidden>
+      <span class="text">Sky's the limit</span>
+    </label>
+  </div>
+</div>
+ <a href="August16.html" class="back">Back</a>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="August16.js"></script>
   </body>

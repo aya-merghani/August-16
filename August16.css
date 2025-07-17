@@ -6,7 +6,7 @@
   margin-left: auto;
   margin-right: auto;
   top: 150px;
-  background-color: navy; /* navy blue */
+  background-color: steelblue; /* navy blue */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
  
 }
@@ -23,7 +23,7 @@
   border-right: 140px solid transparent;
   border-bottom: 82px solid transparent;
   /* a little smaller */
-  border-top: 98px solid lightgray; /* Same navy */
+  border-top: 98px solid steelblue; /* Same navy */
   /* a little larger */
   transform-origin: top;
   pointer-events: none;
@@ -31,9 +31,9 @@
 }
 
 .pocket {
-  border-left: 140px solid white; /* Soft blue for the pocket */
-  border-right: 140px solid white;
-  border-bottom: 90px solid whitesmoke; /* Lighter navy */
+  border-left: 140px solid rgb(166, 201, 212); /* Soft blue for the pocket */
+  border-right: 140px solid rgb(166, 201, 212);
+  border-bottom: 90px solid rgb(63, 109, 175); /* Lighter navy */
   border-top: 90px solid transparent;
   border-radius: 7px;
 
@@ -187,16 +187,16 @@
     margin-left: 50px;
   }
 }
-body {
+body.act {
+  background-color:goldenrod;
+  margin: 0;
+}
+body.main {
   background-image: url(background.jpg);
  background-repeat: no-repeat;
  background-size: cover;
  background-attachment: fixed;
 }
-body.activity {
-background-color: beige;
-}
-
 .envlope-wrapper {
   height: 380px;
   overflow: hidden;
@@ -213,9 +213,9 @@ background-color: beige;
   transition: all 0.1s linear;
   -webkit-appearance: none;
   background-color: transparent;
-  border: solid 2px blue;
+  border: solid 2px steelblue;
   border-radius: 4px;
-  color: blue;
+  color: steelblue;
   display: inline-block;
   font-size: 14px;
   text-transform: uppercase;
@@ -228,8 +228,9 @@ background-color: beige;
 }
 
 .reset button:hover {
-  background-color: navy;
-  color: blue;
+  background-color: #3fa5f8;
+  color: steelblue;
+  border: solid 2px #3fa5f8;
 }
 
 .letterimg {
@@ -296,15 +297,95 @@ font-style: normal;
 .reset .no:hover ,.reset .y:hover {
   background-color: goldenrod;
   color: white;
+  border-color: goldenrod;
 }
 .nuh-uh {
   justify-items: center;
   color: white;
   font-size: 1.5rem;
+  display: none;
+  margin-bottom: 20px;
 }
 
 .lin {
   width: 40%;
   display: flex;
   filter: drop-shadow(0 0 0.75rem rgb(182, 131, 2));
+  
+}
+.download {
+  justify-content: center;
+  display:flex;
+  padding: 10px 16px;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.download:hover {
+ filter: drop-shadow(0 0 0.75rem rgb(182, 131, 2));
+}
+
+.flyer {
+  align-items: center;
+  justify-content: center;
+  text-align:center;
+  background: #fdf6e3;
+  color: rgb(63, 109, 175);
+  font-family: "Dancing Script", cursive;
+  width: 40%;
+  border: 2px solid #d6c083;
+  border-radius: 4px;
+  padding: 95px 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+/*
+.strips {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+*/
+.strip {
+  padding: 10px;
+  background-color: #fdf6e3;
+  color: rgb(63, 109, 175);
+   font-family: "Dancing Script", cursive;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px dashed #fde8bd;
+  width: 130px;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+   transform-origin: center center;
+}
+/*
+.strip input:checked + .text {
+  transform: scale(1.5);
+  font-weight: bold;
+}
+  */
+  .strip:hover, .strip:active {
+  transform: translateX(40px) scale(1.8) translateY(-50px);
+  z-index: 10;
+  background: #fdf6e3;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+@media (max-width: 850px) {
+.layout {
+  justify-self: center;
+  display: flex;
+  align-items: stretch;
+  max-width: 800px;
+ }
+}
+.back {
+  margin-bottom: 20px;
+  padding: 20px;
+  color: steelblue;
+  text-decoration: solid;
+}
+.back:hover, .back:active {
+  color: rgb(39, 80, 138) ;
 }
