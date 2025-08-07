@@ -372,6 +372,7 @@ font-style: normal;
   background: #fdf6e3;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
+/* mobile responsive styles*/
 @media (max-width: 850px) {
 .layout {
   justify-self: center;
@@ -380,6 +381,26 @@ font-style: normal;
   max-width: 800px;
   max-height: max-content;
  }
+  .flyer {
+    width: 90%; /* Make flyer take most of screen width on mobile */
+    padding: 60px 15px; /* Reduce padding for mobile */
+    margin: 0 auto; /* Center the flyer */
+  }
+  
+  .strip {
+    width: 100px; /* Smaller strips for mobile */
+    padding: 8px;
+    font-size: 0.9rem; /* Slightly smaller text */
+  }
+   /* Adjust hover/active effects for mobile */
+  .strip:hover, .strip:active {
+    transform: translateX(20px) scale(1.4) translateY(-30px); /* Less dramatic transform */
+  }
+  
+  .back {
+    font-size: 1.2rem; /* Smaller back button text */
+    padding: 15px;
+  }
 }
 .back {
   margin-bottom: 20px;
